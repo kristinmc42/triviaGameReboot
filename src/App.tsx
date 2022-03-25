@@ -26,7 +26,6 @@ const App = () => {
   const [ score, setScore ] = useState(0);
   const [ gameOver, setGameOver ] = useState(true);
 
-  console.log(questions)
 
   const startTrivia = async () => {
     setLoading(true);
@@ -84,7 +83,7 @@ const App = () => {
             Start
           </button>
        ) : null }
-       {!gameOver ? <p className="score">Score:</p> : null }
+       {!gameOver ? <p className="score">Score: {score} / {TOTAL_QUESTIONS}</p> : null }
 
        {loading && <p className="loading">Loading Questions....</p>}
 
